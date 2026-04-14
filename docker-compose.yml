@@ -41,8 +41,9 @@ services:
       dockerfile: Dockerfile
     container_name: kb-frontend
     ports:
-      - "3000:3000"
+      - "10100:3000"
     environment:
+      - BACKEND_URL=http://backend:8000
       - NEXT_PUBLIC_API_URL=http://localhost:8000
     depends_on:
       - backend
@@ -57,7 +58,7 @@ services:
       POSTGRES_USER: ${POSTGRES_USER:-kb}
       POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-kb_password}
     ports:
-      - "5432:5432"
+      - "5434:5432"
     volumes:
       - pg_data:/var/lib/postgresql/data
     healthcheck:
@@ -69,10 +70,10 @@ services:
 
   # ChromaDB (Vector DB)
   chroma:
-    image: chromadb/chroma:latest
+    image: chromadb/chroma:0.6.3
     container_name: kb-chroma
     ports:
-      - "8001:8000"
+      - "8002:8000"
     volumes:
       - chroma_data:/chroma/chroma
     environment:
