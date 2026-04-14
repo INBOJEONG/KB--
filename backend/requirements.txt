@@ -12,6 +12,10 @@ alembic==1.14.*
 pydantic==2.*
 pydantic-settings==2.*
 
+# Core scientific (pin first to avoid backtracking)
+numpy>=1.26,<3
+scipy>=1.14
+
 # LLM & RAG
 chromadb==0.6.*
 sentence-transformers==3.*
