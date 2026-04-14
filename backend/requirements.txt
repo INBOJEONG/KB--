@@ -1,0 +1,40 @@
+# Web Framework
+fastapi==0.115.*
+uvicorn[standard]==0.32.*
+python-multipart==0.0.*
+
+# Database
+sqlalchemy[asyncio]==2.0.*
+asyncpg==0.30.*
+alembic==1.14.*
+
+# Validation
+pydantic==2.*
+pydantic-settings==2.*
+
+# LLM & RAG
+chromadb==0.6.*
+sentence-transformers==3.*
+langchain==0.3.*
+langchain-text-splitters==0.3.*
+
+# Document Parsing
+unstructured[pdf,docx,pptx,xlsx]==0.16.*
+pymupdf==1.25.*
+python-docx==1.*
+openpyxl==3.*
+python-pptx==1.*
+pandas==2.*
+
+# File Storage
+minio==7.*
+
+# Auth
+python-jose[cryptography]==3.*
+passlib[bcrypt]==1.*
+
+# HTTP Client
+httpx==0.28.*
+
+# Utils
+python-dotenv==1.*

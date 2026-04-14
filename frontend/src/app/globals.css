@@ -1,0 +1,46 @@
+@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css');
+@import "tailwindcss";
+
+@theme inline {
+  --color-background: #f5f6fa;
+  --color-foreground: #1c1e2d;
+  --color-primary: #5b5fc7;
+  --color-primary-light: #eef0ff;
+  --color-border: #e4e6ee;
+  --color-surface: #ffffff;
+  --color-muted: #999999;
+  --color-cat-hr: #c44569;
+  --color-cat-dev: #0ea47a;
+  --color-cat-sales: #e08b2d;
+  --color-cat-finance: #7c5cbf;
+  --color-cat-policy: #d94452;
+  --font-sans: 'Pretendard Variable', 'Noto Sans KR', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+body {
+  background: var(--color-background);
+  color: var(--color-foreground);
+  font-family: var(--font-sans);
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade-up {
+  animation: fadeUp 0.3s ease both;
+}
+
+@keyframes bounce-dot {
+  from { transform: translateY(0); }
+  to { transform: translateY(-6px); }
+}
+
+.typing-dot {
+  animation: bounce-dot 0.6s ease infinite alternate;
+}
+
+::-webkit-scrollbar { width: 5px; }
+::-webkit-scrollbar-thumb { background: #ddd; border-radius: 3px; }
+::-webkit-scrollbar-track { background: transparent; }
